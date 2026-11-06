@@ -33,10 +33,10 @@
                 </a>
             </div>
             <div class="iconnav">
-                <a href="profile.html" class="iconn">
+                <a href="profile.html" class="iconn profile-trigger">
                     <img src="image/Vector.svg" width="26px" alt="профиль">
                 </a>
-                <a href="#" class="iconn">
+                <a href="cart.html" class="iconn">
                     <img src="image/Vector (1).svg" width="29px" alt="корзина">
                 </a>
             </div>
@@ -53,38 +53,41 @@
             <div class="profiletop">
                 <img src="image/Group (1).svg" width="122px" height="122px" alt="аватар" class="profileavatar">
                 <div class="profiletext">
-                    <p class="profilename">Пользователь</p>
-                    <p class="profilephone">+7 (999) 321-54-76</p>
+                    <p class="profilename">Загрузка...</p>
+                    <p class="profilephone"></p>
                 </div>
             </div>
 
             <p class="orderstitle">Мои заказы</p>
-
-            <div class="ordertablehead">
-                <span class="ordernumber">Номер заказа</span>
-                <span class="orderdate">Дата</span>
-                <span class="orderpos">Позиций</span>
-                <span class="ordersum">Сумма</span>
-                <span class="orderstatus">Статус</span>
-            </div>
-
-            <div class="orderrow">
-                <span class="ordernumber">№1234</span>
-                <span class="orderdate">12.11.2026</span>
-                <span class="orderpos">2 шт</span>
-                <span class="ordersum">750 ₽</span>
-                <span class="orderstatus">Готовится</span>
-            </div>
-
-            <div class="orderrow">
-                <span class="ordernumber">№1256</span>
-                <span class="orderdate">09.11.2026</span>
-                <span class="orderpos">3 шт</span>
-                <span class="ordersum">1050 ₽</span>
-                <span class="orderstatus">Доставлен</span>
-            </div>
+            <button class="knop1 reviewbtn">Оставить отзыв</button>
         </div>
     </main>
+
+    <div class="modaloverlay" id="reviewModal">
+        <div class="modalblock regmodal" style="height: auto; padding-bottom: 40px;">
+            <h2 class="modaltitle">Ваш отзыв</h2>
+            <form class="modalform" id="reviewForm">
+                <div class="rating-select">
+                    <p class="rating-label">Ваша оценка:</p>
+                    <div class="stars-container" id="starRating">
+                        <img src="image/Star 6.svg" class="star" data-value="1" alt="звезда">
+                        <img src="image/Star 6.svg" class="star" data-value="2" alt="звезда">
+                        <img src="image/Star 6.svg" class="star" data-value="3" alt="звезда">
+                        <img src="image/Star 6.svg" class="star" data-value="4" alt="звезда">
+                        <img src="image/Star 6.svg" class="star" data-value="5" alt="звезда">
+                    </div>
+                </div>
+
+                <textarea id="reviewText" class="modalinput" placeholder="Поделитесь впечатлениями..." style="height: 120px; resize: none; padding-top: 15px; font-family: 'lora'; margin-top: 10px;" maxlength="115"></textarea>
+                
+                <div style="width: 425px; text-align: right; font-family: 'lora'; font-size: 16px; color: #7D6E94; margin-top: 5px;">
+                    <span id="charCount">0</span>/115
+                </div>
+                
+                <button type="submit" class="knop1 modalknop" style="margin-top: 20px;">Отправить</button>
+            </form>
+        </div>
+    </div>
 
     <footer>
         <div class="footerblock">
@@ -123,6 +126,9 @@
             </div>
         </div>
     </footer>
+
+    <script src="js/profile.js"></script>
+    <script src="js/auth.js"></script>
 </body>
 
 </html>

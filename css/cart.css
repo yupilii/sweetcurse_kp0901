@@ -1,0 +1,461 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #141318;
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: 'lora';
+    src: url(/font/Lora.ttf);
+}
+
+@font-face {
+    font-family: 'spel';
+    src: url(/font/CCSpellcaster\ Italic.ttf);
+}
+
+@font-face {
+    font-family: 'miama';
+    src: url(/font/miamanueva.ttf);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 10;
+}
+
+.headerblock {
+    padding-top: 10px;
+    padding-left: 32px;
+    padding-right: 88px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.headerline {
+    height: 1px;
+    background-color: #393136;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.logo {
+    display: inline-block;
+    line-height: 0;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    margin: 40px auto 0;
+}
+
+.textnavigation {
+    font-family: 'lora';
+    font-size: 25px;
+    color: #CDBDD8;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navtext {
+    line-height: 1;
+}
+
+.textline {
+    width: 85px;
+    height: 0;
+    margin-top: 2px;
+    opacity: 0;
+    overflow: hidden;
+    transition: height 0.2s ease, opacity 0.2s ease;
+}
+
+.textnavigation:hover .textline {
+    height: auto;
+    opacity: 1;
+}
+
+.iconnav {
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+    height: 29px;
+    margin-top: 37px;
+}
+
+.iconn {
+    display: inline-flex;
+    line-height: 0;
+}
+
+.carttitle {
+    font-family: 'spel';
+    font-size: 100px;
+    color: #7D6E94;
+    margin-left: 120px;
+    margin-top: 85px;
+    margin-bottom: 50px;
+}
+
+.cartcontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 153px;
+    margin-left: 120px;
+    margin-bottom: 150px; 
+}
+
+.cartleft {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cartitem {
+    width: 1000px;
+    height: 264px;
+    border: 1px solid #393136;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    box-sizing: border-box;
+}
+
+.cartimg {
+    object-fit: contain;
+    max-height: 180px;
+}
+
+.cartinfo {
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+    justify-content: center;
+}
+
+.cartname {
+    font-family: 'lora';
+    font-size: 35px;
+    color: #CDBDD8;
+    margin-bottom: 10px;
+}
+
+.cartprice {
+    font-family: 'lora';
+    font-size: 30px;
+    color: #7D6E94;
+}
+
+.cartqty {
+    width: 162px;
+    height: 70px;
+    border: 1px solid #393136;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    box-sizing: border-box;
+    margin-left: auto; 
+    margin-right: 50px; 
+}
+
+.qtybtn {
+    font-family: 'lora';
+    font-size: 30px;
+    color: #CDBDD8;
+    cursor: pointer;
+    user-select: none;
+}
+
+.qtynum {
+    font-family: 'lora';
+    font-size: 30px;
+    color: #CDBDD8;
+}
+
+.cartright {
+    width: 527px;
+    height: 451px;
+    border: 1px solid #393136;
+    padding: 61px 46px; 
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 4px 32.6px 0px rgba(72, 54, 98, 0.16);
+}
+
+.carttitleinfo {
+    font-family: 'lora';
+    font-size: 35px;
+    color: #7D6E94;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.cartrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%; 
+}
+
+.cartrow span {
+    font-family: 'lora';
+    font-size: 25px;
+    color: #CDBDD8;
+}
+
+.cartline {
+    width: 435px;
+    min-height: 1px;
+    background-color: #393136;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    flex-shrink: 0;
+}
+
+.knop1 {
+    width: 232px;
+    height: 61px;
+    font-family: 'lora';
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 0;
+    border: 1px solid;
+    transition: transform 0.25s ease;
+    flex-shrink: 0;
+    color: #CDBDD8;
+    background-color: #484453;
+    border-color: #CDBDD8;
+    box-shadow: inset 0 0 0 5px #484453, inset 0 0 0 6px #CDBDD8;
+}
+
+.knop1:hover {
+    transform: scale(0.98);
+}
+
+.knop1:active {
+    transform: scale(0.95);
+}
+
+.cartknop {
+    width: 256px;
+    height: 61px;
+    margin-top: 40px;
+    font-size: 18px;
+    align-self: center; 
+}
+
+footer {
+    width: 100%;
+    background-color: #141318;
+    border-top: 1px solid #393136;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 31px; 
+    padding-top: 35px; 
+    padding-bottom: 50px; 
+}
+
+.footerblock {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.logofooter {
+    flex-shrink: 0;
+}
+
+.infofooter {
+    display: flex;
+    flex-direction: row;
+    gap: 200px;
+    margin-left: 180px;
+}
+
+.titlefooter {
+    font-family: 'lora';
+    font-size: 25px;
+    color: #CDBDD8;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.navfooter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.linkfooter {
+    font-family: 'lora';
+    font-size: 25px;
+    color: #CDBDD8;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.linkfooter:hover {
+    color: #8D68A7;
+}
+
+.contactfooter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contactitem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.contactitem img {
+    object-fit: contain;
+}
+
+.contacttext {
+    font-family: 'lora';
+    font-size: 25px;
+    color: #CDBDD8;
+}
+
+.schedulefooter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.scheduletext {
+    font-family: 'lora';
+    font-size: 25px;
+    color: #CDBDD8;
+}
+
+.modaloverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(20, 19, 24, 0.8); 
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalblock {
+    background-color: #E5DAED;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.regmodal {
+    width: 607px;
+    height: 555px;
+    padding-top: 58px;
+}
+
+.authmodal {
+    width: 607px;
+    height: 445px;
+    padding-top: 58px;
+}
+
+.modaltitle {
+    font-family: 'lora';
+    font-size: 35px;
+    color: #141318;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    font-weight: normal;
+}
+
+.modalform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.modalinput {
+    width: 425px;
+    height: 45px;
+    padding: 0 15px;
+    border: 1px solid #141318;
+    background-color: transparent;
+    font-family: 'lora';
+    font-size: 25px;
+    color: #141318;
+    outline: none;
+}
+
+.modalinput::placeholder {
+    color: #7D6E94;
+    font-family: 'lora';
+    font-size: 25px;
+}
+
+.modalknop {
+    width: 287px;
+    height: 61px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #CDBDD8;
+    background-color: #484453;
+    border-color: #CDBDD8;
+    box-shadow: inset 0 0 0 5px #484453, inset 0 0 0 6px #CDBDD8;
+    border: 1px solid;
+    font-family: 'lora';
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+}
+
+.modaltext {
+    font-family: 'lora';
+    font-size: 15px;
+    color: #141318;
+}
+
+.modallink {
+    font-family: 'lora';
+    font-size: 18px;
+    color: #8D68A7;
+    text-decoration: none;
+}
+
+.modallink:hover {
+    text-decoration: underline;
+}
+
+.authmodal .modalknop {
+    width: 138px;
+}

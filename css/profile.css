@@ -313,3 +313,246 @@ footer {
     font-size: 25px;
     color: #CDBDD8;
 }
+
+.modaloverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(20, 19, 24, 0.8); 
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalblock {
+    background-color: #E5DAED;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.regmodal {
+    width: 607px;
+    height: 555px;
+    padding-top: 58px;
+}
+
+.authmodal {
+    width: 607px;
+    height: 445px;
+    padding-top: 58px;
+}
+
+.modaltitle {
+    font-family: 'lora';
+    font-size: 35px;
+    color: #141318;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    font-weight: normal;
+}
+
+.modalform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.modalinput {
+    width: 425px;
+    height: 45px;
+    padding: 0 15px;
+    border: 1px solid #141318;
+    background-color: transparent;
+    font-family: 'lora';
+    font-size: 25px;
+    color: #141318;
+    outline: none;
+}
+
+.modalinput::placeholder {
+    color: #7D6E94;
+    font-family: 'lora';
+    font-size: 25px;
+}
+
+.modalknop {
+    width: 287px;
+    height: 61px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #CDBDD8;
+    background-color: #484453;
+    border-color: #CDBDD8;
+    box-shadow: inset 0 0 0 5px #484453, inset 0 0 0 6px #CDBDD8;
+    border: 1px solid;
+    font-family: 'lora';
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+}
+
+.modaltext {
+    font-family: 'lora';
+    font-size: 15px;
+    color: #141318;
+}
+
+.modallink {
+    font-family: 'lora';
+    font-size: 18px;
+    color: #8D68A7;
+    text-decoration: none;
+}
+
+.modallink:hover {
+    text-decoration: underline;
+}
+
+.authmodal .modalknop {
+    width: 138px;
+}
+
+
+.reviewbtn {
+    width: 287px;
+    height: 61px;
+    margin-left: 119px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-family: 'lora';
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 0;
+    border: 1px solid;
+    transition: transform 0.25s ease;
+    flex-shrink: 0;
+    color: #CDBDD8;
+    background-color: #484453;
+    border-color: #CDBDD8;
+    box-shadow: inset 0 0 0 5px #484453, inset 0 0 0 6px #CDBDD8;
+}
+
+.reviewbtn:hover {
+    transform: scale(0.98);
+}
+.reviewbtn:active {
+    transform: scale(0.95);
+}
+
+.modaloverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(20, 19, 24, 0.8); 
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalblock {
+    background-color: #E5DAED;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.regmodal {
+    width: 607px;
+    padding-top: 58px;
+}
+
+.modaltitle {
+    font-family: 'lora';
+    font-size: 35px;
+    color: #141318;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    font-weight: normal;
+}
+
+.modalform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.modalinput {
+    width: 425px;
+    height: 45px;
+    padding: 0 15px;
+    border: 1px solid #141318;
+    background-color: transparent;
+    font-family: 'lora';
+    font-size: 25px;
+    color: #141318;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.modalinput::placeholder {
+    color: #7D6E94;
+}
+
+.modalknop {
+    width: 287px;
+    height: 61px;
+    margin-bottom: 20px;
+    color: #CDBDD8;
+    background-color: #484453;
+    border-color: #CDBDD8;
+    box-shadow: inset 0 0 0 5px #484453, inset 0 0 0 6px #CDBDD8;
+    border: 1px solid;
+    font-family: 'lora';
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+}
+
+.rating-select {
+    width: 425px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.rating-label {
+    font-family: 'lora';
+    font-size: 20px;
+    color: #7D6E94;
+    margin-bottom: 5px;
+}
+
+.stars-container {
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.star {
+    width: 39px;
+    height: 39px;
+    transition: transform 0.2s;
+}
+
+.star:hover {
+    transform: scale(1.1);
+}

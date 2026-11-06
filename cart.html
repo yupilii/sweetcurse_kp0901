@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+
+<body>
+    <header>
+        <div class="headerblock">
+            <a href="index.html" class="logo">
+                <img src="image/ChatGPT_Image_14_okt_2026_g__22_35_01 1.svg" width="112px" alt="логотип">
+            </a>
+            <div class="navigation">
+                <a href="index.html" class="textnavigation">
+                    <span class="navtext">Главная</span>
+                    <img class="textline" src="image/d68aa71a7408517c40670a27b38b3cb3 4.svg" alt="">
+                </a>
+                <a href="index.html#pocimu" class="textnavigation">
+                    <span class="navtext">Почему мы</span>
+                    <img class="textline" src="image/d68aa71a7408517c40670a27b38b3cb3 4.svg" alt="">
+                </a>
+                <a href="index.html#seti" class="textnavigation">
+                    <span class="navtext">Сеты</span>
+                    <img class="textline" src="image/d68aa71a7408517c40670a27b38b3cb3 4.svg" alt="">
+                </a>
+                <a href="index.html#menuchka" class="textnavigation">
+                    <span class="navtext">Меню</span>
+                    <img class="textline" src="image/d68aa71a7408517c40670a27b38b3cb3 4.svg" alt="">
+                </a>
+            </div>
+            <div class="iconnav">
+                <a href="profile.html" class="iconn profile-trigger">
+                    <img src="image/Vector.svg" width="26px" alt="профиль">
+                </a>
+                <a href="cart.html" class="iconn">
+                    <img src="image/Vector (1).svg" width="29px" alt="корзина">
+                </a>
+            </div>
+        </div>
+        <div class="headerline"></div>
+    </header>
+
+    <main>
+        <p class="carttitle">Корзина</p>
+
+        <div class="cartcontainer">
+            <div class="cartleft" id="cart-items-container">
+            </div>
+
+            <div class="cartright">
+                <p class="carttitleinfo">Информация о заказе</p>
+                <div class="cartrow">
+                    <span>Количество позиций:</span>
+                    <span id="cart-total-qty">0</span>
+                </div>
+                <div class="cartline"></div>
+                <div class="cartrow">
+                    <span>Итого:</span>
+                    <span id="cart-total-price">0 ₽</span>
+                </div>
+                <button class="knop1 cartknop">Оформить заказ</button>
+            </div>
+        </div>
+    </main>
+
+    <div class="modaloverlay" id="registerModal">
+        <div class="modalblock regmodal">
+            <h2 class="modaltitle">Регистрация</h2>
+            <form class="modalform" action="#">
+                <input type="tel" class="modalinput" placeholder="+7 (999) 321-54-76">
+                <input type="text" class="modalinput" placeholder="Логин">
+                <input type="password" class="modalinput" placeholder="Пароль">
+                <input type="password" class="modalinput" placeholder="Повторите пароль">
+                <button type="submit" class="knop1 modalknop">Зарегистрироваться</button>
+            </form>
+            <p class="modaltext">Уже есть аккаунт? <a href="javascript:void(0);" class="modallink" id="goToLogin">Войти</a></p>
+        </div>
+    </div>
+
+    <div class="modaloverlay" id="loginModal">
+        <div class="modalblock authmodal">
+            <h2 class="modaltitle">Авторизация</h2>
+            <form class="modalform" action="#">
+                <input type="text" class="modalinput" placeholder="Логин">
+                <input type="password" class="modalinput" placeholder="Пароль">
+                <button type="submit" class="knop1 modalknop">Войти</button>
+            </form>
+            <p class="modaltext">Нет аккаунта? <a href="javascript:void(0);" class="modallink" id="goToRegister">Зарегистрироваться</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footerblock">
+            <div class="logofooter">
+                <img src="image/ChatGPT_Image_14_okt_2026_g__22_35_01 1.svg" width="112px" height="112px" alt="логотип">
+            </div>
+            <div class="infofooter">
+                <div class="navfooter">
+                    <p class="titlefooter">Навигация</p>
+                    <a href="index.html" class="linkfooter">Главная</a>
+                    <a href="index.html#pocimu" class="linkfooter">Почему мы</a>
+                    <a href="index.html#seti" class="linkfooter">Сеты</a>
+                    <a href="index.html#menuchka" class="linkfooter">Меню</a>
+                </div>
+                <div class="contactfooter">
+                    <p class="titlefooter">Контакты</p>
+                    <div class="contactitem">
+                        <img src="image/Group 101.svg" width="16px" height="20.01px" alt="адрес">
+                        <span class="contacttext">г. Оренбург, ул. Чкалова, д. 11</span>
+                    </div>
+                    <div class="contactitem">
+                        <img src="image/Vector (2).svg" width="20px" height="20.01px" alt="телефон">
+                        <span class="contacttext">+7 (999) 123-45-67</span>
+                    </div>
+                    <div class="contactitem">
+                        <img src="image/Group 102.svg" width="19px" height="13.92px" alt="почта">
+                        <span class="contacttext">sweetcurse@mail.ru</span>
+                    </div>
+                </div>
+                <div class="schedulefooter">
+                    <p class="titlefooter">Расписание</p>
+                    <p class="scheduletext">Пн–Чт: 10:00–22:00</p>
+                    <p class="scheduletext">Пт–Сб: 10:00–00:00</p>
+                    <p class="scheduletext">Вс: 11:00–21:00</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/cart.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+
+</html>
