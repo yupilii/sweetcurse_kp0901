@@ -46,8 +46,8 @@
 
     <main>
         <div class="profileblock">
-            <a href="index.html" class="closebtn">
-                <img src="image/Vector (3).svg" width="23px" height="23px" alt="закрыть">
+            <a href="javascript:void(0);" class="closebtn" id="logoutBtn">
+                <img src="image/Vector (3).svg" width="23px" height="23px" alt="выйти">
             </a>
 
             <div class="profiletop">
@@ -64,7 +64,7 @@
     </main>
 
     <div class="modaloverlay" id="reviewModal">
-        <div class="modalblock regmodal" style="height: auto; padding-bottom: 40px;">
+        <div class="modalblock regmodal reviewmodalblock">
             <h2 class="modaltitle">Ваш отзыв</h2>
             <form class="modalform" id="reviewForm">
                 <div class="rating-select">
@@ -78,13 +78,14 @@
                     </div>
                 </div>
 
-                <textarea id="reviewText" class="modalinput" placeholder="Поделитесь впечатлениями..." style="height: 120px; resize: none; padding-top: 15px; font-family: 'lora'; margin-top: 10px;" maxlength="115"></textarea>
-                
-                <div style="width: 425px; text-align: right; font-family: 'lora'; font-size: 16px; color: #7D6E94; margin-top: 5px;">
+                <textarea id="reviewText" class="modalinput reviewtextarea" placeholder="Поделитесь впечатлениями..."
+                    maxlength="115"></textarea>
+
+                <div class="charcount-wrapper">
                     <span id="charCount">0</span>/115
                 </div>
-                
-                <button type="submit" class="knop1 modalknop" style="margin-top: 20px;">Отправить</button>
+
+                <button type="submit" class="knop1 modalknop reviewmodalknop">Отправить</button>
             </form>
         </div>
     </div>

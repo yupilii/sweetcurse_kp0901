@@ -6,11 +6,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             window.location.href = 'index.html';
             return;
         }
-        
+
         const user = await meRes.json();
         const nameInput = document.getElementById('checkout-name');
         const phoneInput = document.getElementById('checkout-phone');
-        
+
         if (nameInput && !nameInput.value) nameInput.value = user.login;
         if (phoneInput && !phoneInput.value) phoneInput.value = user.phone;
 
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     let totalQty = 0;
     let totalSum = 0;
-    
+
     cartData.forEach(item => {
         totalQty += item.qty;
         totalSum += item.price * item.qty;
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             const nameInput = document.getElementById('checkout-name');
             const phoneVal = document.getElementById('checkout-phone').value;
-            
+
             let payment = 'Не выбран';
             document.querySelectorAll('input[name="payment"]').forEach(r => { if (r.checked) payment = r.nextElementSibling.textContent; });
 
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         delivery: delivery
                     })
                 });
-                
+
                 const data = await res.json();
                 if (data.error) alert(data.error);
                 else {

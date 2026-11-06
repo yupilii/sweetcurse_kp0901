@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         try {
             const res = await fetch('/api/cart');
             const cart = await res.json();
-            
+
             cartLeft.innerHTML = '';
             let totalQty = 0;
             let totalSum = 0;
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 btn.addEventListener('click', async () => {
                     const name = btn.getAttribute('data-name');
                     const delta = btn.classList.contains('plus') ? 1 : -1;
-                    
+
                     await fetch('/api/cart/' + encodeURIComponent(name), {
                         method: 'PATCH',
                         headers: { 'Content-Type': 'application/json' },
@@ -57,8 +57,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                 });
             });
 
-        } catch (err) { 
-            console.error(err); 
+        } catch (err) {
+            console.error(err);
             cartLeft.innerHTML = '<p style="color: #7D6E94; font-family: \'lora\'; font-size: 30px;">Ошибка загрузки корзины</p>';
         }
     }

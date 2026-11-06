@@ -9,16 +9,21 @@ document.addEventListener('DOMContentLoaded', async () => {
     const regForm = registerModal ? registerModal.querySelector('form') : null;
     const loginForm = loginModal ? loginModal.querySelector('form') : null;
 
-    let isAuth = false;
+    let userRole = null;
     try {
         const res = await fetch('/api/me');
-        if (res.ok) isAuth = true;
+        if (res.ok) {
+            const user = await res.json();
+            userRole = user.role;
+        }
     } catch (e) { }
 
     if (profileBtn) {
         profileBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            if (isAuth) {
+            if (userRole === 'admin') {
+                window.location.href = 'admin.html';
+            } else if (userRole === 'user') {
                 window.location.href = 'profile.html';
             } else if (registerModal) {
                 registerModal.style.display = 'flex';
@@ -68,14 +73,20 @@ document.addEventListener('DOMContentLoaded', async () => {
                 });
                 const data = await res.json();
                 if (data.error) alert(data.error);
-                else window.location.href = 'profile.html';
+                else {
+                    if (data.role === 'admin') {
+                        window.location.href = 'admin.html';
+                    } else {
+                        window.location.href = 'profile.html';
+                    }
+                }
             } catch (err) { alert('Ошибка сервера.'); }
         });
     }
 
     if (phoneInput) {
         phoneInput.addEventListener('input', (e) => {
-            let input = e.target.value.replace(/\D/g, ''); 
+            let input = e.target.value.replace(/\D/g, '');
             if (input.length === 0) { e.target.value = ''; return; }
             if (input[0] !== '7') input = '7' + input;
             if (input.length > 11) input = input.substring(0, 11);

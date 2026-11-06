@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Админ-панель</title>
+    <link rel="stylesheet" href="css/in.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+    <header>
+        <div class="headerblock">
+            <a href="index.html" class="logo">
+                <img src="image/ChatGPT_Image_14_okt_2026_g__22_35_01 1.svg" width="112px" alt="логотип">
+            </a>
+            <div class="navigation">
+                <a href="index.html" class="textnavigation">
+                    <span class="navtext">Главная</span>
+                    <img class="textline" src="image/d68aa71a7408517c40670a27b38b3cb3 4.svg" alt="">
+                </a>
+                <a href="index.html#pocimu" class="textnavigation">
+                    <span class="navtext">Почему мы</span>
+                    <img class="textline" src="image/d68aa71a7408517c40670a27b38b3cb3 4.svg" alt="">
+                </a>
+                <a href="index.html#seti" class="textnavigation">
+                    <span class="navtext">Сеты</span>
+                    <img class="textline" src="image/d68aa71a7408517c40670a27b38b3cb3 4.svg" alt="">
+                </a>
+                <a href="index.html#menuchka" class="textnavigation">
+                    <span class="navtext">Меню</span>
+                    <img class="textline" src="image/d68aa71a7408517c40670a27b38b3cb3 4.svg" alt="">
+                </a>
+            </div>
+            <div class="iconnav">
+                <a href="javascript:void(0);" class="iconn" id="logoutBtn" title="Выйти из аккаунта">
+                    <img src="image/Vector.svg" width="26px" alt="профиль">
+                </a>
+                <a href="cart.html" class="iconn">
+                    <img src="image/Vector (1).svg" width="29px" alt="корзина">
+                </a>
+            </div>
+        </div>
+        <div class="headerline"></div>
+    </header>
+
+    <div class="admin-container">
+        <h1>Панель администратора</h1>
+
+        <div class="tabs">
+            <div class="tab active" onclick="switchTab('orders', event)">Заказы</div>
+            <div class="tab" onclick="switchTab('users', event)">Пользователи</div>
+            <div class="tab" onclick="switchTab('reviews', event)">Отзывы</div>
+            <div class="tab" onclick="switchTab('products', event)">Товары</div>
+        </div>
+
+        <div id="orders" class="section active">
+            <h2>Управление заказами</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Клиент</th>
+                        <th>Сумма</th>
+                        <th>Статус</th>
+                        <th>Изменить статус</th>
+                    </tr>
+                </thead>
+                <tbody id="orders-table"></tbody>
+            </table>
+        </div>
+
+        <div id="users" class="section">
+            <h2>Пользователи</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Логин</th>
+                        <th>Телефон</th>
+                        <th>Роль</th>
+                        <th>Действия</th>
+                    </tr>
+                </thead>
+                <tbody id="users-table"></tbody>
+            </table>
+        </div>
+
+        <div id="reviews" class="section">
+            <h2>Отзывы</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Автор</th>
+                        <th>Текст</th>
+                        <th>Оценка</th>
+                        <th>Статус</th>
+                        <th>Действия</th>
+                    </tr>
+                </thead>
+                <tbody id="reviews-table"></tbody>
+            </table>
+        </div>
+
+        <div id="products" class="section">
+            <h2>Добавить товар</h2>
+            <div class="form-row">
+                <select id="p-category">
+                    <option value="drink">Напиток</option>
+                    <option value="dessert">Десерт</option>
+                </select>
+                <input type="text" id="p-name" placeholder="Название">
+                <input type="number" id="p-price" placeholder="Цена">
+                <input type="file" id="p-image" accept="image/*">
+                <button type="button" id="addProductBtn">Добавить</button>
+            </div>
+            <h2>Список товаров</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Категория</th>
+                        <th>Название</th>
+                        <th>Цена</th>
+                        <th>Действия</th>
+                    </tr>
+                </thead>
+                <tbody id="products-table"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footerblock">
+            <div class="logofooter">
+                <img src="image/ChatGPT_Image_14_okt_2026_g__22_35_01 1.svg" width="112px" height="112px" alt="логотип">
+            </div>
+            <div class="infofooter">
+                <div class="navfooter">
+                    <p class="titlefooter">Навигация</p>
+                    <a href="index.html" class="linkfooter">Главная</a>
+                    <a href="index.html#pocimu" class="linkfooter">Почему мы</a>
+                    <a href="index.html#seti" class="linkfooter">Сеты</a>
+                    <a href="index.html#menuchka" class="linkfooter">Меню</a>
+                </div>
+                <div class="contactfooter">
+                    <p class="titlefooter">Контакты</p>
+                    <div class="contactitem">
+                        <img src="image/Group 101.svg" width="16px" height="20.01px" alt="адрес">
+                        <span class="contacttext">г. Оренбург, ул. Чкалова, д. 11</span>
+                    </div>
+                    <div class="contactitem">
+                        <img src="image/Vector (2).svg" width="20px" height="20.01px" alt="телефон">
+                        <span class="contacttext">+7 (999) 123-45-67</span>
+                    </div>
+                    <div class="contactitem">
+                        <img src="image/Group 102.svg" width="19px" height="13.92px" alt="почта">
+                        <span class="contacttext">sweetcurse@mail.ru</span>
+                    </div>
+                </div>
+                <div class="schedulefooter">
+                    <p class="titlefooter">Расписание</p>
+                    <p class="scheduletext">Пн–Чт: 10:00–22:00</p>
+                    <p class="scheduletext">Пт–Сб: 10:00–00:00</p>
+                    <p class="scheduletext">Вс: 11:00–21:00</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/admin.js"></script>
+</body>
+
+</html>

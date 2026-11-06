@@ -3,6 +3,19 @@ document.addEventListener('DOMContentLoaded', async () => {
     const profileName = document.querySelector('.profilename');
     const profilePhone = document.querySelector('.profilephone');
     const reviewBtn = document.querySelector('.reviewbtn');
+    const logoutBtn = document.getElementById('logoutBtn');
+
+    // Обработчик выхода из аккаунта
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', async () => {
+            try {
+                await fetch('/api/logout', { method: 'POST' });
+                window.location.href = 'index.html';
+            } catch (err) {
+                console.error('Ошибка при выходе:', err);
+            }
+        });
+    }
 
     try {
         const meRes = await fetch('/api/me');
@@ -32,14 +45,14 @@ document.addEventListener('DOMContentLoaded', async () => {
                     const date = new Date(order.created_at).toLocaleDateString('ru-RU');
                     const itemsCount = order.qty_total;
                     const rowHTML = `
-        <div class="orderrow">
-            <span class="ordernumber">№${order.id}</span>
-            <span class="orderdate">${date}</span>
-            <span class="orderpos">${itemsCount} шт</span>
-            <span class="ordersum">${order.total} ₽</span>
-            <span class="orderstatus">${order.status}</span>
-        </div>
-    `;
+                        <div class="orderrow">
+                            <span class="ordernumber">№${order.id}</span>
+                            <span class="orderdate">${date}</span>
+                            <span class="orderpos">${itemsCount} шт</span>
+                            <span class="ordersum">${order.total} ₽</span>
+                            <span class="orderstatus">${order.status}</span>
+                        </div>
+                    `;
                     reviewBtn.insertAdjacentHTML('beforebegin', rowHTML);
                 });
             }

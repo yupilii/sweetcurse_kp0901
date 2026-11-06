@@ -2,18 +2,18 @@ document.addEventListener('DOMContentLoaded', async () => {
     const reviewContainer = document.querySelector('.review-container');
     const prevBtn = document.querySelector('.prev-btn');
     const nextBtn = document.querySelector('.next-btn');
-    
+
     if (!reviewContainer) return;
 
     try {
         const res = await fetch('/api/reviews');
         if (res.ok) {
             const reviews = await res.json();
-            
+
             reviews.forEach(review => {
                 const initial = review.author.charAt(0).toUpperCase();
                 const rating = review.rating || 5;
-                
+
                 let starsHTML = '';
                 for (let i = 1; i <= 5; i++) {
                     if (i <= rating) {
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (nextBtn) {
         nextBtn.addEventListener('click', () => {
             currentIndex++;
-            if (currentIndex >= reviews.length) currentIndex = 0; 
+            if (currentIndex >= reviews.length) currentIndex = 0;
             showReview(currentIndex);
         });
     }
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (prevBtn) {
         prevBtn.addEventListener('click', () => {
             currentIndex--;
-            if (currentIndex < 0) currentIndex = reviews.length - 1; 
+            if (currentIndex < 0) currentIndex = reviews.length - 1;
             showReview(currentIndex);
         });
     }

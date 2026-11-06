@@ -721,8 +721,6 @@ header {
     flex-direction: column;
     gap: 80px;
     align-items: center;
-    position: sticky;
-    top: 0; 
     z-index: 100;
     background-color: #141318; 
     width: 100%;
@@ -773,13 +771,12 @@ header {
     opacity: 1;
 }
 
-.menuu, 
-.deserts-group {
+.menuu, .deserts-group {
     display: flex;
     flex-direction: column;
     gap: 70px;
     width: 100%;
-    align-items: center;
+    align-items: center; 
     flex-shrink: 0;
 }
 
@@ -874,8 +871,9 @@ header {
 
 .menucard {
     display: flex;
-    flex-direction: row;
     gap: 80px;
+    justify-content: flex-start; 
+    width: 1321px; 
 }
 
 .desertcard .product-wrapper {
