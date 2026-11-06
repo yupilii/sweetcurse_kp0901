@@ -1,0 +1,315 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #141318;
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: 'lora';
+    src: url(/font/Lora.ttf);
+}
+
+@font-face {
+    font-family: 'spel';
+    src: url(/font/CCSpellcaster\ Italic.ttf);
+}
+
+@font-face {
+    font-family: 'miama';
+    src: url(/font/miamanueva.ttf);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 10;
+}
+
+.headerblock {
+    padding-top: 10px;
+    padding-left: 32px;
+    padding-right: 88px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.headerline {
+    height: 1px;
+    background-color: #393136;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.logo {
+    display: inline-block;
+    line-height: 0;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    margin: 40px auto 0;
+}
+
+.textnavigation {
+    font-family: 'lora';
+    font-size: 25px;
+    color: #CDBDD8;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navtext {
+    line-height: 1;
+}
+
+.textline {
+    width: 85px;
+    height: 0;
+    margin-top: 2px;
+    opacity: 0;
+    overflow: hidden;
+    transition: height 0.2s ease, opacity 0.2s ease;
+}
+
+.textnavigation:hover .textline {
+    height: auto;
+    opacity: 1;
+}
+
+.iconnav {
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+    height: 29px;
+    margin-top: 37px;
+}
+
+.iconn {
+    display: inline-flex;
+    line-height: 0;
+}
+
+.profileblock {
+    width: 1513px;
+    margin: 100px auto 105px auto;
+    border: 1px solid #393136;
+    padding-bottom: 105px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.closebtn {
+    position: absolute;
+    top: 35px;
+    left: 33px;
+    display: inline-block;
+    line-height: 0;
+    transition: transform 0.2s ease;
+}
+
+.closebtn:hover {
+    transform: scale(1.1);
+}
+
+.profiletop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 104px;
+    margin-left: 119px;
+    gap: 40px;
+}
+
+.profileavatar {
+    object-fit: contain;
+}
+
+.profiletext {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.profilename {
+    font-family: 'lora';
+    font-size: 30px;
+    color: #CDBDD8;
+}
+
+.profilephone {
+    font-family: 'lora';
+    font-size: 25px;
+    color: #7D6E94;
+}
+
+.orderstitle {
+    font-family: 'lora';
+    font-size: 35px;
+    color: #CDBDD8;
+    margin-top: 80px;
+    margin-left: 119px;
+}
+
+.ordertablehead {
+    display: flex;
+    flex-direction: row;
+    margin-top: 35px;
+    margin-left: 119px;
+    margin-bottom: 30px;
+}
+
+.ordertablehead span {
+    font-family: 'lora';
+    font-size: 25px;
+    color: #7D6E94;
+}
+
+.orderrow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 1264px;
+    height: 99px;
+    border: 1px solid #393136;
+    margin-left: 119px;
+    margin-bottom: 15px;
+    padding-left: 56px;
+    box-sizing: border-box;
+}
+
+.orderrow span {
+    font-family: 'lora';
+    font-size: 25px;
+    color: #CDBDD8;
+}
+
+.ordernumber {
+    margin-right: 152px;
+    flex-shrink: 0;
+}
+
+.orderdate {
+    margin-right: 234px;
+    flex-shrink: 0;
+}
+
+.orderpos {
+    margin-right: 127px;
+    flex-shrink: 0;
+}
+
+.ordersum {
+    margin-right: 161px;
+    flex-shrink: 0;
+}
+
+.orderstatus {
+    flex-grow: 1;
+}
+
+.orderrow .orderstatus{
+    color: #8D68A7;
+}
+
+footer {
+    width: 100%;
+    background-color: #141318;
+    border-top: 1px solid #393136;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 31px; 
+    padding-top: 35px; 
+    padding-bottom: 50px; 
+}
+
+.footerblock {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.logofooter {
+    flex-shrink: 0;
+}
+
+.infofooter {
+    display: flex;
+    flex-direction: row;
+    gap: 200px;
+    margin-left: 180px;
+}
+
+.titlefooter {
+    font-family: 'lora';
+    font-size: 25px;
+    color: #CDBDD8;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.navfooter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.linkfooter {
+    font-family: 'lora';
+    font-size: 25px;
+    color: #CDBDD8;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.linkfooter:hover {
+    color: #8D68A7;
+}
+
+.contactfooter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contactitem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.contactitem img {
+    object-fit: contain;
+}
+
+.contacttext {
+    font-family: 'lora';
+    font-size: 25px;
+    color: #CDBDD8;
+}
+
+.schedulefooter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.scheduletext {
+    font-family: 'lora';
+    font-size: 25px;
+    color: #CDBDD8;
+}
